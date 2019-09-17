@@ -12541,11 +12541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Important Files\\Tri-C\\2019 Fall\\ASP.NET\\IT2030JHuber\\Lab2\\Lab2\\Lab2.csproj",
+      "projectUniqueName": "E:\\Important Files\\Tri-C\\2019 Fall\\ASP.NET\\IT2030JasonHuber\\Lab2\\Lab2\\Lab2.csproj",
       "projectName": "Lab2",
-      "projectPath": "E:\\Important Files\\Tri-C\\2019 Fall\\ASP.NET\\IT2030JHuber\\Lab2\\Lab2\\Lab2.csproj",
+      "projectPath": "E:\\Important Files\\Tri-C\\2019 Fall\\ASP.NET\\IT2030JasonHuber\\Lab2\\Lab2\\Lab2.csproj",
       "packagesPath": "C:\\Users\\Jason\\.nuget\\packages\\",
-      "outputPath": "E:\\Important Files\\Tri-C\\2019 Fall\\ASP.NET\\IT2030JHuber\\Lab2\\Lab2\\obj\\",
+      "outputPath": "E:\\Important Files\\Tri-C\\2019 Fall\\ASP.NET\\IT2030JasonHuber\\Lab2\\Lab2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
