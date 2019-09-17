@@ -1,0 +1,51 @@
+
+header{
+ text-align: center;
+    color: white;
+    font-size: 25px;
+    line-height: 100px;
+    background-size: auto;
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    margin 5px;
+    width: auto;
+    height: 10%;
+}
+aside{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    line-height: 760px;
+    background-color: darkorange;
+    background-size: auto;
+    border-radius: 55px;
+    margin: 5px;
+    float: left;
+    width: 20%;
+    height: 80%;
+}
+section{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    line-height: 760px;
+    background-color: gainsboro;
+    background-size: auto;
+    border-radius: 55px;
+    margin: 5px;
+    float: left;
+    width: 78.5%;
+    height: 80%;
+}
+footer{
+    clear: left;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    line-height: 100px;
+    background-color: green;
+    background-size: auto;
+    border-radius: 20px;
+    width: auto;
+    height: 10%;
+}
