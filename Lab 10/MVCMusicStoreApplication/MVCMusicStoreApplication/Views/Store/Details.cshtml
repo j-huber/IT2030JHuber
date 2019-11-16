@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MVCMusicStoreApplication.Models.Album>
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<img class="sitePictureLogo" src="~/Content/Images/logo.png" alt="ASP.NET MVC logo" />
+<div>
+    <text class="siteTextLogo">ASP.NET MVC MUSIC STORE</text>
+</div>
+<hr />
+<div>
+    <p>
+        @foreach (var item in Model)
+        {
+            <ul>
+                <li>@Html.DisplayFor(modelItem => item.AlbumArtUrl)</li>
+                <li>Artist: @Html.DisplayFor(modelItem => item.Artist.Name)</li>
+                <li>Album Title: @Html.DisplayFor(modelItem => item.Title)</li>
+                <li>Genre: @Html.DisplayFor(modelItem => item.Genre.Name)</li>
+                <li>Price: @Html.DisplayFor(modelItem => item.Price)</li>
+                <li>In Stock: @Html.DisplayFor(modelItem => item.InStock)</li>
+                <li>Country of Origin: @Html.DisplayFor(modelItem => item.CountryOfOrigin)</li>
+            </ul>
+            <button id="addToCartBtn" type="button">@Html.ActionLink("Add to Cart", "/ShoppingCart/AddToCart/", new { id = item.AlbumId })</button>
+        }
+
+    </p>
+   
+</div>
+
