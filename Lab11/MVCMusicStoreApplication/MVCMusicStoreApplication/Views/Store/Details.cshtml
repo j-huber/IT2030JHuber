@@ -22,7 +22,7 @@
                 <li>In Stock: @Html.DisplayFor(modelItem => item.InStock)</li>
                 <li>Country of Origin: @Html.DisplayFor(modelItem => item.CountryOfOrigin)</li>
             </ul>
-            <button id="addToCartBtn" type="button">@Html.ActionLink("Add to Cart", "/ShoppingCart/AddToCart/", new { id = item.AlbumId })</button>
+            <button id="addToCartBtn" type="button">@Html.ActionLink("Add to Cart","AddToCart", "ShoppingCart", new {id = item.AlbumId}, null)</button>
         }
 
     </p>
