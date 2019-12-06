@@ -1,0 +1,105 @@
+﻿@model IEnumerable<FinalProject_JasonHuber.Models.Event>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EventTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventStartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventEndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventStartTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventEndTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrganizerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrganizerEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrganizerPhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxTickets)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TicketsAvailable)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.EventTitle)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EventDescription)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EventStartDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EventEndDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EventStartTime)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EventEndTime)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EventCity)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EventState)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.OrganizerName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.OrganizerEmail)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.OrganizerPhoneNumber)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaxTickets)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TicketsAvailable)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.EventId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.EventId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.EventId })
+    </td>
+</tr>
+}
+
+</table>

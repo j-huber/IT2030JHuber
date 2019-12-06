@@ -1,0 +1,24 @@
+﻿@model IEnumerable<FinalProject_JasonHuber.Models.Event>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>City of Brunswick Events</h2>
+
+<div>
+    <text class="siteTextLogo">Event Organizer</text>
+</div>
+<hr />
+<div>
+    <text class="pageTitle">List of Events</text>
+    <p>
+        @foreach (var item in Model)
+        {
+            <ul>
+                <li>
+                    @Html.ActionLink(item.EventTitle, "Details","Events",new { id = item.EventId },null)
+                </li>
+            </ul>
+        }
+    </p>
+</div>
