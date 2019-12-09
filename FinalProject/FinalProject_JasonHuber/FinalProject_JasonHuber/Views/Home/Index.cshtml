@@ -3,12 +3,46 @@
     ViewBag.Title = "Home Page";
 }
 
-<h2>City of Brunswick Events</h2>
+<h2>Event Organizer</h2>
 
 <div>
     <text class="siteTextLogo">Event Organizer</text>
 </div>
 <hr />
+
+<div class="panel panel-default">
+    <div class="panel-heading"> Event Search</div>
+    <div class="panel-body">
+        @using (Ajax.BeginForm("EventSearch", "Home", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "GET",
+            OnFailure = "searchFailed",
+            LoadingElementId = "ajax-loader",
+            UpdateTargetId = "searchresults"
+        }))
+        {
+            <input type="text" name="q" />
+            <input type="submit" value="search" />
+
+        }
+        @using (Ajax.BeginForm("LocationSearch", "Home", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "GET",
+            OnFailure = "searchFailed",
+            LoadingElementId = "ajax-loader",
+            UpdateTargetId = "searchresults"
+        }))
+        {
+            <input type="text" name="q" />
+            <input type="submit" value="search" />
+
+        }
+        <div id="searchresults"></div>
+    </div>
+</div>
+
 <div>
     <text class="pageTitle">List of Events</text>
     <p>
@@ -16,9 +50,28 @@
         {
             <ul>
                 <li>
-                    @Html.ActionLink(item.EventTitle, "Details","Events",new { id = item.EventId },null)
+                    @Html.ActionLink(item.EventTitle, "Details", "Events", new { id = item.EventId }, null)
                 </li>
             </ul>
         }
     </p>
 </div>
+
+<div id="Last Minute Deal">
+    @Ajax.ActionLink("Click here to see Last Minute Deals", "LastMinuteDeal", null,
+    new AjaxOptions
+    {
+        UpdateTargetId = "lastminutedeal",
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "Get"
+    },
+    new { @class = "btn btn-primary" }
+    )
+</div>
+@section Scripts{
+    <script src="~/Scripts/Apps/EventScript.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+}
+
+
+

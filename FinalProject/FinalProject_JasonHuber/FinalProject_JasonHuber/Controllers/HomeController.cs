@@ -11,6 +11,30 @@ namespace FinalProject_JasonHuber.Controllers
     {
         private FinalProject_JasonHuberDBContext db = new FinalProject_JasonHuberDBContext();
 
+        //public ActionResult LastMinuteDeal()
+        // {
+         //    var event = GetLastMinuteDeal();
+         //    return PartialView("_LastMinuteDeal",event);
+         //}
+
+        // private List<Event> GetLastMinuteDeal()
+       // {
+         //   var event = db.Event.Orderby(a=> Guid.NewGuid(()).First();
+         //    return Event;
+        // }
+
+      //public ActionResult EventSearch(string q)
+        //{
+       //     var event = getEvents(q);
+       //     return PartialViewResult(Events);
+      //  }
+
+   // private List<Event> getEvents(string searchString
+    //{
+   //     return db.Event.Where(a=>a.)
+        
+   // }
+
         private List<Event> GetEvents()
         {
             return db.Events.ToList();

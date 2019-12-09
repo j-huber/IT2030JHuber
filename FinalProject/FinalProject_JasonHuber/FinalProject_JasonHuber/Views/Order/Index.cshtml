@@ -1,0 +1,67 @@
+﻿@model FinalProject_JasonHuber.Models.OrderViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h2>Here's your Shopping Cart</h2>
+
+<br />
+<div id="update-message">
+
+</div>
+<div>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Event Type</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Organizer</th>
+            <th>Organizer Email</th>
+            <th>Organizer Phone</th>
+            <th>Tickets Available</th>
+        </tr>
+
+        @foreach (var item in Model.OrderItems)
+        {
+            <tr id="event-@item.EventId">
+                <td>@item.EventSelected.EventTitle</td>
+                <td>@item.EventSelected.EventDescription</td>
+                <td>@item.EventSelected.EventStartDate</td>
+                <td>@item.EventSelected.EventEndDate</td>
+                <td>@item.EventSelected.EventStartTime</td>
+                <td>@item.EventSelected.EventEndTime</td>
+                <td>@item.EventSelected.EventType</td>
+                <td>@item.EventSelected.EventCity</td>
+                <td>@item.EventSelected.EventState</td>
+                <td> @item.EventSelected.OrganizerName</td>
+                <td> @item.EventSelected.OrganizerEmail</td>
+                <td> @item.EventSelected.OrganizerPhoneNumber</td>
+                <td> @item.EventSelected.TicketsAvailable</td>
+                <td><a href="#" data-id="@item.EventId" class="RemoveLink">Remove</a></td>
+            </tr>
+        }
+        <tr>
+            <td>Ticket Total:</td>
+            <td id="ticket-total">@Model.TicketCount</td>
+        </tr>
+    </table>
+    <p class="button">
+        @Html.ActionLink("Back to Browse", "Index", "Home")
+    </p>
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/Apps/EventScript.js"></script>
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+
+}

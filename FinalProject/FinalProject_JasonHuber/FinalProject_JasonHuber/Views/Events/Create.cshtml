@@ -66,7 +66,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.EventType,"Event Type: ", htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.EventType, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model=>model.EventType, new { htmAttributes = new { @class = "control-label col-md-2" } })
             @Html.ValidationMessageFor(model => model.EventType, "", new { @class = "text-danger" })
         </div>
        <button type="button">@Html.ActionLink("Create Event Type","Create","EventTypes")</button>

@@ -1,0 +1,23 @@
+﻿@model FinalProject_JasonHuber.Models.Event
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Your Last Minute Deals Are: </h3>
+    </div>
+    <div class="panel-body">
+        <p>
+
+        </p>
+        <div id="event-details">
+            <p>
+                <em>Event: </em>
+                @Model.EventTitle
+            </p>
+            <p>
+                <em>Tickets Available:</em>
+                @Model.TicketsAvailable
+            </p>
+            @Html.ActionLink("Add to Order", "AddOrder", "Order", new { id = Model.EventId}, new { @class = "btn btn-primary"})
+        </div>
+    </div>
+</div>
