@@ -28,6 +28,7 @@ namespace FinalProject_JasonHuber.Models
 
         [Required]
         public virtual string EventEndTime { get; set; }
+        public virtual int EventTypeId { get; set; }
         public virtual EventType EventType { get; set; }
 
         [Required]

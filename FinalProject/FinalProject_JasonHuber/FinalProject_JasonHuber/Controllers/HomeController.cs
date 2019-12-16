@@ -12,10 +12,10 @@ namespace FinalProject_JasonHuber.Controllers
         private FinalProject_JasonHuberDBContext db = new FinalProject_JasonHuberDBContext();
 
         //public ActionResult LastMinuteDeal()
-        // {
-         //    var event = GetLastMinuteDeal();
-         //    return PartialView("_LastMinuteDeal",event);
-         //}
+       // {
+        //     var event = GetLastMinuteDeal();
+       //     return PartialView("_LastMinuteDeal",event);
+        // }
 
         // private List<Event> GetLastMinuteDeal()
        // {

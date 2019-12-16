@@ -39,6 +39,7 @@ namespace FinalProject_JasonHuber.Controllers
         [Authorize]
         public ActionResult Create()
         {
+            ViewBag.EventTypes = new SelectList(db.EventTypes, "EventTypeId", "EventTypeName");
             return View();
         }
 
@@ -56,7 +57,7 @@ namespace FinalProject_JasonHuber.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            ViewBag.EventTypes = new SelectList(db.EventTypes, "EventTypeId", "EventTypeName", @event.EventTypeId);
             return View(@event);
         }
 
